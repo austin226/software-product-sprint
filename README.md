@@ -10,3 +10,7 @@ To get started:
   - If the tutorial panel does not open or display the walkthrough contents, try refreshing the page.
 
 Then follow the on-screen instructions to set up your repo.
+
+# Why Markdown is great
+
+You don't need to worry about HTML, or XML, or JSON, or Protocol Buffers, or YAML
