@@ -26,11 +26,6 @@ public final class FindMeetingQuery {
             return NO_OPTIONS;
         }
 
-        // If there is an event, split up the day into before and after.
-        if (events.size() > 0) {
-            TimeRange before = 
-        }
-
         // No events, the whole day is free.
         return Arrays.asList(TimeRange.WHOLE_DAY);
     }
