@@ -14,10 +14,24 @@
 
 package com.google.sps;
 
+import java.util.Arrays;
 import java.util.Collection;
 
 public final class FindMeetingQuery {
-  public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
-    throw new UnsupportedOperationException("TODO: Implement this method.");
-  }
+    private static final Collection<TimeRange> NO_OPTIONS = Arrays.asList();
+
+    public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
+        // Cannot schedule a meeting longer than a single day.
+        if (request.getDuration() > TimeRange.WHOLE_DAY.duration()) {
+            return NO_OPTIONS;
+        }
+
+        // If there is an event, split up the day into before and after.
+        if (events.size() > 0) {
+            TimeRange before = 
+        }
+
+        // No events, the whole day is free.
+        return Arrays.asList(TimeRange.WHOLE_DAY);
+    }
 }
